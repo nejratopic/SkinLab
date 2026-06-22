@@ -1,0 +1,32 @@
+<h2 *ngIf="productId != 0">Edit Product</h2>
+<h2 *ngIf="productId == 0">Add New Product</h2>
+
+<form (ngSubmit)="onSubmit()" #productForm="ngForm">
+
+  <!-- Category Name Field -->
+  <div>
+    <label for="name">Product Name:</label>
+    <input [(ngModel)]="product.name" id="name" name="name" required #name="ngModel" />
+
+    <!-- Error message for empty name -->
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-text">
+      Category Name is required.
+    </div>
+  </div>
+
+  <!-- Description Field -->
+  <div>
+    <label for="description">Description:</label>
+    <textarea [(ngModel)]="product.description" id="description" name="description" required #description="ngModel"></textarea>
+
+    <!-- Error message for empty description -->
+    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-text">
+      Description is required.
+    </div>
+  </div>
+
+  <!-- Submit button only enabled if form is valid -->
+  <button type="submit" [disabled]="productForm.invalid">Save Changes</button>
+
+  <button routerLink="/admin/products" type="button">Cancel</button>
+</form>

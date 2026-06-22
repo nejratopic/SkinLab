@@ -1,0 +1,51 @@
+/* Navigation Styling */
+nav {
+  background-color: #f8f9fa; 
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border-radius: 5px; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px; 
+}
+
+li {
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 4px; 
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+li:hover {
+  background-color: #117A8B; 
+  color: white; 
+}
+
+li.active {
+  font-weight: bold;
+  color: #007bff; 
+}
+
+li a {
+  text-decoration: none; 
+  color: inherit;
+  font-size: 18px;
+  font-weight: 600; 
+  transition: color 0.3s ease; 
+}
+
+li a:hover {
+  color: #fff;
+}
+
+/* Router outlet container styling */
+div[style="background-color: rgb(238, 233, 236);"] {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px; 
+}

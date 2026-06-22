@@ -1,0 +1,134 @@
+<div class="part1">
+  <div class="skin-tabel">
+
+    <!-- HEADER -->
+    <div class="skin-header">
+      <h1>SkinLab</h1>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="user-profile" routerLink="/auth/login">
+      <span>LOGIN</span>
+      <img src="images/user.png">
+    </div>
+
+    <!-- CATEGORIES -->
+    <table class="styled-table">
+      <thead class="skin-table-header">
+      <tr>
+        <th>Vegan</th>
+        <th>Lip Balms & Treatments</th>
+        <th>Moisturizers</th>
+        <th>Masks</th>
+        <th>Wellness</th>
+        <th>Sunscreen</th>
+        <th>Cleansers</th>
+        <th>Eye Care</th>
+      </tr>
+      </thead>
+    </table>
+
+    <!-- HERO SECTION -->
+    <div class="header-left">
+      <div class="header-left-title">
+        <h1>
+          Every Skin Deserves Attention. Find Products That Match Your Needs.
+        </h1>
+
+        <div class="header-buttons">
+          <div class="header-button">SHOP NOW</div>
+        </div>
+      </div>
+
+      <!-- EXISTING HERO IMAGE (NE DIRAMO) -->
+      <div class="header-right-image">
+        <!-- ovdje ide tvoja postojeća slika / background -->
+      </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- NEW SECTION BELOW HERO -->
+    <!-- ===================== -->
+
+    <div style="
+      width: 100%;
+      margin-top: 150px;
+      display: flex;
+      align-items: center;
+    ">
+
+      <!-- LEFT SIDE TEXT -->
+      <div style="
+        width: 50%;
+        padding: 40px;
+      ">
+
+        <!-- HOVER TITLE (smooth pop effect) -->
+        <h2
+          style="
+            font-size: 38px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            display: inline-block;
+          "
+          onmouseover="
+            this.style.transform='scale(1.08)';
+            this.style.color='#2c2c2c';
+            this.innerText='CeraVe – Dermatologist Approved Care';
+          "
+          onmouseout="
+            this.style.transform='scale(1)';
+            this.style.color='black';
+            this.innerText='CeraVe products';
+          "
+        >
+          CeraVe products
+        </h2>
+
+        <!-- DESCRIPTION -->
+        <p style="
+          font-size: 22px;
+          line-height: 1.7;
+          font-family: 'Dubai Medium';
+        ">
+          Developed with dermatologists, CeraVe products help restore
+          the skin’s natural barrier using essential ceramides.
+          Gentle, effective, and ideal for everyday skincare routines.
+        </p>
+
+        <!-- BUTTON -->
+        <div style="
+          margin-top: 20px;
+          display: inline-block;
+          padding: 12px 28px;
+          border: 2px solid black;
+          border-radius: 30px;
+          font-weight: bold;
+          cursor: pointer;
+        ">
+          Learn More
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE IMAGE -->
+      <div style="
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      ">
+        <img
+          src="images/pngkey.com-loreal-png-3956650.png"
+          alt="CeraVe Product"
+          style="
+            width: 350px;
+            border-radius: 24px;
+          "
+        />
+      </div>
+
+    </div>
+
+  </div>
+</div>

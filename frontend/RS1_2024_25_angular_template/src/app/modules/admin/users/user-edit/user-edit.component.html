@@ -1,0 +1,48 @@
+
+<h2 *ngIf="userId!=0">Edit User</h2>
+<h2 *ngIf="userId==0">Add new User</h2>
+
+<form (ngSubmit)="updateUser()">
+  <div>
+    <label for="name">First Name:</label>
+    <input [(ngModel)]="user.firstName" id="firstName" name="firstName" required/>
+  </div>
+
+  <div>
+    <label for="name">Last Name:</label>
+    <input [(ngModel)]="user.lastName" id="lastName" name="lastName" required/>
+  </div>
+
+  <div>
+    <label for="name">Email:</label>
+    <input [(ngModel)]="user.email" id="email" name="email" required/>
+  </div>
+
+  <div>
+    <label for="name">Password:</label>
+    <input type="password" [(ngModel)]="user.password" id="password" name="password" required/>
+  </div>
+
+  <div>
+    <label for="name">Phone Number:</label>
+    <input [(ngModel)]="user.phoneNumber" id="phoneNumber" name="phoneNumber" required/>
+  </div>
+
+  <div>
+    <label for="name">Address:</label>
+    <input [(ngModel)]="user.address" id="address" name="address" required/>
+  </div>
+
+  <div>
+    <label for="name">IsAdmin:</label>
+    <input type="checkbox" [(ngModel)]="user.isAdmin" id="isAdmin" name="isAdmin" required/> 
+  </div>
+
+  <div>
+    <label for="name">IsManager:</label>
+    <input type="checkbox" [(ngModel)]="user.isManager" id="isManager" name="isManager" required/>
+  </div>
+
+  <button type="submit">Save Changes</button>
+  <button routerLink="/admin/users" type="button">Cancel</button>
+</form>

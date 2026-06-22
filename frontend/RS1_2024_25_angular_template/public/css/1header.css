@@ -1,0 +1,87 @@
+
+.part1 .skin-header h1 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 60px;
+  color:darkgrey;
+  margin: 0;
+}
+
+.part1 .styled-table {
+  border-collapse: collapse;
+  margin:25px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.part1 .styled-table thead tr {
+  background-color: rgb(117, 183, 191);
+  color: #ffffff;
+  text-align:center;
+}
+
+.part1 .styled-table th,
+.part1 .styled-table td {
+  padding: 12px 15px;
+}
+
+.part1 .header-left-title {
+  background-color: #f6f6f8;
+
+}
+.part1 .header-left-title h1 {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 100px;
+  font-style: italic;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.part1 .header-right-image {
+  background: url("../images/header-img.jpeg");
+  width: 80%;
+  height: 500px;
+  background-size: cover;
+  margin: 0;              
+  padding: 0;   
+}
+
+.part1 .header-left{
+  display: flex;
+  background-color:darkgrey ;
+}
+
+.user-profile{
+  padding: 9px;
+  background-color: rgb(117, 183, 191);
+  width: 8%;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  float: right;
+  margin-bottom: 20px;
+
+}
+
+.part1 .header-buttons{
+  display: flex;
+}
+
+.part1 .header-button {
+  padding: 18px;
+  background-color: white;
+  width: 40%;
+  text-align: center;
+  color: gray;
+  font-size: x-large;
+  margin-left: 150px;
+  margin-top: 50px;
+  border-radius: 20px;
+ 
+}

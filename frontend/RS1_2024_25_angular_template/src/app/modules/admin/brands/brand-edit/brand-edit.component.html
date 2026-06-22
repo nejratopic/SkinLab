@@ -1,0 +1,32 @@
+<h2 *ngIf="brandId != 0">Edit Brand</h2>
+<h2 *ngIf="brandId == 0">Add New Brand</h2>
+
+<form (ngSubmit)="onSubmit()" #brandForm="ngForm">
+
+  <!-- Category Name Field -->
+  <div>
+    <label for="name">Brand Name:</label>
+    <input [(ngModel)]="brand.name" id="name" name="name" required #name="ngModel" />
+
+    <!-- Error message for empty name -->
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-text">
+      Brand Name is required.
+    </div>
+  </div>
+
+  <!-- Description Field -->
+  <div>
+    <label for="description">Description:</label>
+    <textarea [(ngModel)]="brand.description" id="description" name="description" required #description="ngModel"></textarea>
+
+    <!-- Error message for empty description -->
+    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-text">
+      Description is required.
+    </div>
+  </div>
+
+  <!-- Submit button only enabled if form is valid -->
+  <button type="submit" [disabled]="brandForm.invalid">Save Changes</button>
+
+  <button routerLink="/admin/categories" type="button">Cancel</button>
+</form>

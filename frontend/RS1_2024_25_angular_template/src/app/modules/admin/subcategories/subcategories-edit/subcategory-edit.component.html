@@ -1,0 +1,49 @@
+<h2 *ngIf="subcategoryId != 0">Edit Subcategory</h2>
+<h2 *ngIf="subcategoryId == 0">Add New Subcategory</h2>
+
+<form (ngSubmit)="onSubmit(subcategoryForm)" #subcategoryForm="ngForm">
+
+  <!-- Subcategory Name Field -->
+  <div>
+    <label for="name">Subcategory Name:</label>
+    <input [(ngModel)]="subcategory.name" id="name" name="name" required #name="ngModel" />
+    
+    <!-- Error message for empty name -->
+    <div *ngIf="name.invalid && (name.dirty || name.touched || submitted)" class="error-text">
+      Subcategory Name is required.
+    </div>
+  </div>
+
+  <!-- Description Field -->
+  <div>
+    <label for="description">Description:</label>
+    <textarea [(ngModel)]="subcategory.description" id="description" name="description" required #description="ngModel"></textarea>
+
+    <!-- Error message for empty description -->
+    <div *ngIf="description.invalid && (description.dirty || description.touched || submitted)" class="error-text">
+      Description is required.
+    </div>
+  </div>
+
+  <!-- Category Dropdown -->
+  <div>
+    <label for="categoryId">Category:</label>
+    <select [(ngModel)]="subcategory.categoryId" id="categoryId" name="categoryId" required #category="ngModel">
+      <option value="">-- Select Category --</option>
+      <option *ngFor="let category of categories" [value]="category.id">
+        {{ category.name }}
+      </option>
+    </select>
+
+    <!-- Error message for empty category -->
+    <div *ngIf="category.invalid && (category.dirty || category.touched || submitted)" class="error-text">
+      Category is required.
+    </div>
+  </div>
+
+  <!-- Submit button only enabled if form is valid -->
+  <button type="submit" [disabled]="subcategoryForm.invalid">Save Changes</button>
+
+  <!-- Cancel button to navigate away -->
+  <button routerLink="/admin/subcategories" type="button">Cancel</button>
+</form>

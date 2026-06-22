@@ -1,0 +1,128 @@
+/* Center the form within the page */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f7f9fc;
+}
+
+/* Title styling */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form field container */
+div {
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Input, Select and Textarea styling */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+
+input[disabled],
+select[disabled] {
+  background-color: #e9ecef;
+  color: #6c757d;
+}
+
+/* Button styling */
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  margin-right: 15px;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Cancel button styling */
+button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Cancel button hover effect */
+button[type="button"]:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* Error message styling */
+.error-text {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+
+textarea {
+  min-height: 100px;
+}
+
+
+button[type="submit"],
+button[type="button"] {
+  margin-top: 10px;
+}
+
+
+textarea {
+  margin-bottom: 15px;
+}
+

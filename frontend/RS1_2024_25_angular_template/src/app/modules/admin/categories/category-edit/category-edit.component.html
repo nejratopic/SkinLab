@@ -1,0 +1,32 @@
+<h2 *ngIf="categoryId != 0">Edit Category</h2>
+<h2 *ngIf="categoryId == 0">Add New Category</h2>
+
+<form (ngSubmit)="onSubmit()" #categoryForm="ngForm">
+
+  <!-- Category Name Field -->
+  <div>
+    <label for="name">Category Name:</label>
+    <input [(ngModel)]="category.name" id="name" name="name" required #name="ngModel" />
+
+    <!-- Error message for empty name -->
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error-text">
+      Category Name is required.
+    </div>
+  </div>
+
+  <!-- Description Field -->
+  <div>
+    <label for="description">Description:</label>
+    <textarea [(ngModel)]="category.description" id="description" name="description" required #description="ngModel"></textarea>
+
+    <!-- Error message for empty description -->
+    <div *ngIf="description.invalid && (description.dirty || description.touched)" class="error-text">
+      Description is required.
+    </div>
+  </div>
+
+  <!-- Submit button only enabled if form is valid -->
+  <button type="submit" [disabled]="categoryForm.invalid">Save Changes</button>
+
+  <button routerLink="/admin/categories" type="button">Cancel</button>
+</form>

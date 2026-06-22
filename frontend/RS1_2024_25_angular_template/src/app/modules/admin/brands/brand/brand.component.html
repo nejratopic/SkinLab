@@ -1,0 +1,33 @@
+
+
+<h2>Brand Management</h2>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>CreatedAt</th>
+    <th>UpdatedAt</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let brand of brands">
+    <td>{{ brand.id }}</td>
+    <td>{{ brand.name }}</td>
+    <td>{{ brand.description }}</td>
+    <td>{{ brand.createdAt}}</td>
+    <td>{{ brand.updatedAt}}</td>
+    <td>
+      <button (click)="editBrand(brand.id)">Edit</button>
+      <button (click)="deleteBrand(brand.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="button-container">
+  <button class="new-button"(click)="addBrand()">New brand</button>
+</div>

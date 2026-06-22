@@ -1,0 +1,33 @@
+
+
+<h2>Product Management</h2>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>CreatedAt</th>
+    <th>UpdatedAt</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{ product.id }}</td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.description }}</td>
+    <td>{{ product.createdAt}}</td>
+    <td>{{ product.updatedAt}}</td>
+    <td>
+      <button (click)="editProduct(product.id)">Edit</button>
+      <button (click)="deleteProduct(product.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="button-container">
+  <button class="new-button"(click)="addProduct()">New product</button>
+</div>

@@ -1,0 +1,35 @@
+
+
+<h2>Subcategory Management</h2>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>CreatedAt</th>
+    <th>UpdatedAt</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let subcategory of subcategories">
+    <td>{{ subcategory.id }}</td>
+    <td>{{ subcategory.name }}</td>
+    <td>{{ subcategory.description }}</td>
+    <td>{{ subcategory.categoryName }}</td>
+    <td>{{ subcategory.createdAt}}</td>
+    <td>{{ subcategory.updatedAt}}</td>
+    <td>
+      <button (click)="editSubcategory(subcategory.id)">Edit</button>
+      <button (click)="deleteSubcategory(subcategory.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="button-container">
+  <button class="new-button"(click)="addSubcategory()">New subcategory</button>
+</div>

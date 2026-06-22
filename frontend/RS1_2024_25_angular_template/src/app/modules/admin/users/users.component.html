@@ -1,0 +1,45 @@
+
+
+<h2>User Management</h2>
+
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+    <th>CreatedAt</th>
+    <th>UpdatedAt</th>
+    <th>IsAdmin</th>
+    <th>IsManager</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.id }}</td>
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.password }}</td>
+    <td>{{ user.phoneNumber }}</td>
+    <td>{{ user.address}}</td>
+    <td>{{ user.createdAt}}</td>
+    <td>{{ user.updatedAt}}</td>
+    <td>{{ user.isAdmin}}</td>
+    <td>{{ user.isManager}}</td>
+    <td>
+      <button (click)="editUser(user.id)">Edit</button>
+      <button (click)="deleteUser(user.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="button-container">
+  <button class="new-button"(click)="addUser()">New user</button>
+</div>
